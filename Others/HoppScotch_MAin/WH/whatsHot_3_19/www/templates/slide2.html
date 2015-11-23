@@ -1,0 +1,127 @@
+<fa-app ng-swipe-left="swipeLeft()" ng-swipe-right="swipeRight()"  ng-controller="Slide2Ctrl" style="height: 100%;width:100%;margin-top:0px;background-color:#000c2e;color:white;position: fixed;top: 0;right: 0;bottom: 0;left: 0;">
+
+        <!-- <fa-modifier 
+            ng-repeat="item in list"
+            fa-origin="[.5, .5]" 
+            fa-align="[.5, 0]" 
+            fa-opacity="opacity" 
+            fa-size="[100,100]"
+            fa-translate="hoursTransition.get()"
+            fa-background-color="red"
+            >
+
+            <fa-modifier 
+                fa-size="[100,100]"
+                fa-rotate-z="item.rotate.get()"
+                fa-background-color="white">
+                    <fa-image-surface  
+                        fa-image-url="img/hours.png" 
+                        fa-size="[100, 100]" >
+                    </fa-image-surface>
+            </fa-modifier>
+            
+
+         </fa-modifier> -->
+         <div fa-click="clockSpin()" fa-opacity="opacity">
+         <fa-modifier fa-origin="[0.5, 0.5]"
+                 fa-align="[0.5, 0]"
+                 fa-scale="scale.get()"
+                 ng-repeat="item in list"
+                 fa-translate="hoursTransition.get()"
+                 fa-click="clockSpin()">
+
+            <!-- outer red surface -->
+                <fa-surface fa-background-color="transparent"
+                            fa-size="[100, 100]"></fa-surface>
+
+            <!-- inner blue surface wrapped in modifier -->
+                <fa-modifier fa-size="[100, 100]"
+                             fa-rotate-z="item.rotate.get()">
+                    <fa-image-surface fa-image-url="img/hours.png" fa-background-color="transparent"
+                                >
+                       
+                    </fa-surface>
+                </fa-modifier>
+                
+            </fa-modifier>
+
+             <fa-modifier fa-origin="[0.5, 0.5]"
+                 fa-align="[0.5, 0]"
+                 fa-scale="scale.get()"
+                 ng-repeat="item in list2"
+                 fa-translate="minutesTransition.get()">
+
+            <!-- outer red surface -->
+                <fa-surface fa-background-color="transparent"
+                            fa-size="[100, 100]"></fa-surface>
+
+            <!-- inner blue surface wrapped in modifier -->
+
+                <fa-modifier fa-size="[100, 100]"
+                             fa-rotate-z="item.rotate.get()">
+                    <fa-image-surface fa-image-url="img/minutes.png" fa-background-color="transparent"
+                                fa-click="clockSpin()">
+                    </fa-image-surface>
+                       
+                    </fa-surface>
+                </fa-modifier>
+                
+            </fa-modifier>
+
+
+         <!-- <fa-modifier 
+            fa-origin="[.5, .5]" 
+            fa-align="[.5, 0]" 
+            fa-opacity="opacity" 
+            fa-translate="minutesTransition.get()">
+
+            <fa-image-surface  
+                fa-image-url="img/minutes.png" 
+                fa-size="[100, 100]" >
+            </fa-image-surface>
+
+         </fa-modifier> -->
+
+        <fa-modifier 
+            fa-origin="[.5, .5]" 
+            fa-align="[.5, 0]" 
+            fa-opacity="opacity" 
+            fa-translate="outlineTransition.get()">
+
+            <fa-image-surface  
+                fa-image-url="img/outline.png" 
+                fa-size="[100, 100]" >
+            </fa-image-surface>
+
+         </fa-modifier>
+
+         <fa-modifier 
+            fa-origin="[.5, .5]" 
+            fa-align="[.5, 0]" 
+            fa-opacity="opacity" 
+            fa-translate="centerTransition.get()">
+
+            <fa-image-surface  
+                fa-image-url="img/center.png" 
+                fa-size="[100, 100]" >
+            </fa-image-surface>
+
+         </fa-modifier>
+        </div>
+
+
+         <fa-modifier  fa-origin="[.5, .5]" fa-align="[.5, 0]" fa-opacity="opacity" fa-translate="textTransition.get()">
+            <fa-surface fa-size="[undefined, 100]" >
+                <h3 style="text-align:center;color:#fff">
+                	View how popular an event, or specific place is in real time.
+                </h3> 
+                <h4 style="text-align:left;margin-left:5%;color:#fff;text-align:center;">
+                    Like which bar is hopping,
+                </h4>
+                <h4 style="text-align:left;margin-left:5%;color:#fff;text-align:center;">
+                    or which stage is cranking at Coachella,
+                </h4>   
+            </fa-surface>
+         </fa-modifier>
+   
+</fa-app>

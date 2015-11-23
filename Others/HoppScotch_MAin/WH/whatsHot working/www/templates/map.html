@@ -1,0 +1,18 @@
+
+<ion-view view-title="Map">
+
+    <ui-gmap-google-map center='map.center' zoom='map.zoom' options="map.options">
+      <ui-gmap-layer  namespace="visualization" type="HeatmapLayer"  show="map.showHeat" onCreated="map.heatLayerCallback" ></ui-gmap-layer>
+    </ui-gmap-google-map>
+
+    <ion-footer-bar class="bar-assertive" ng-controller="MapCtrl">
+        <h1 class="title">
+            <div class="buttons">
+                <button class="button button-clear" ng-click="addLocation()">It's Hot Where I Am</button>
+                Lat: {{map.long}}
+                Long: {{map.lat}}
+            </div>
+        </h1>
+
+    </ion-footer-bar>
+</ion-view>

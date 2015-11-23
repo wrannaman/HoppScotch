@@ -1,0 +1,39 @@
+<fa-app ng-swipe-left="swipeLeft()" ng-swipe-right="swipeRight()"  ng-controller="Slide3Ctrl" style="height: 100%;width:100%;margin-top:0px;background-color:#231f20;color:white;position: fixed;top: 0;right: 0;bottom: 0;left: 0;">
+
+        <fa-modifier fa-origin="[.5, .5]" fa-align="[.5, 0]" fa-translate="imageTransition.get()">
+            <fa-surface  
+                fa-size="[200, 100]" >
+                <div style="width:100%;text-align:center;background-color:transparent;border: 2px solid white;border-radius:0;margin-bottom:5px;color:white;border-radius:5px;height:50px;padding-top:15px;">
+                 It's Pretty Bad.
+                </div>
+            </fa-surface>
+         </fa-modifier>
+         <fa-modifier 
+            fa-origin="[.5, .5]" 
+            fa-align="[.5, 0]" 
+            fa-opacity="opacity"
+            fa-translate="arrowTransition.get()">
+            <fa-surface  
+                fa-size="[200, 100]" >
+                <div style="text-align:center;">
+                <i class="icon ion-ios-arrow-thin-up" style="color:white;font-size:55px;"></i>
+                </div>
+            </fa-surface>
+         </fa-modifier>
+         
+         <fa-modifier  fa-origin="[.5, .5]" fa-align="[.5, 0]" fa-translate="textTransition.get()">
+            <fa-surface fa-size="[undefined, 100]" >
+                <h1 style="text-align:center;color:#fff">
+                    Hit this button if wherever you're at is awful.
+                </h1> 
+                <h3 style="text-align:center;color:#fff">
+                    Your location will appear on the map and automatically be removed after 4 hours.
+                </h3> 
+                <p style="text-align:center;color:#fff">
+                    Totally anonymous. <br>
+                    All chat messages are removed as well.
+                </p> 
+            </fa-surface>
+         </fa-modifier>
+   
+</fa-app>

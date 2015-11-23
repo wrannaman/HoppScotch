@@ -1,0 +1,39 @@
+<fa-app 
+    ng-swipe-left="swipeLeft()" 
+    ng-swipe-right="swipeRight()"  
+    ng-controller="StartCtrl" 
+    style="height: 100%;width:100%;margin-top:0px;background-color:#000c2e;color:white;position: fixed;top: 0;right: 0;bottom: 0;left: 0;">
+         <fa-modifier  
+            fa-origin="[.5, .5]" 
+            fa-align="[.5, 0]" 
+            fa-translate="textTransition.get()"
+            fa-animate-leave="animateOut()"
+            fa-animate-enter="animate()"
+            ng-repeat="x in {x:1}">
+            <fa-surface 
+                ng-click="selection('enter')"
+                fa-size="[100, 100]">
+                <p style="width:100px;padding-top:40px;height:100px;text-align:center;color:#fff;border-radius:50%;border:2px solid white">
+                    <!-- Ever wondered what something was like before you got there? -->
+                   <span fa-show="textShow"> Enter </span>
+                </p>   
+            </fa-surface>
+         </fa-modifier>
+         <fa-modifier  
+            fa-origin="[.5, .5]" 
+            fa-align="[.5, 0]" 
+            fa-translate="text2Transition.get()"
+            fa-animate-leave="animateOut()"
+            fa-animate-enter=""
+            ng-repeat="x in {x:1}">
+            <fa-surface 
+                fa-size="[100, 100]" 
+                ng-click="selection('learn')"
+                >
+                <p style="width:100px;height:100px;padding-top:40px;text-align:center;color:#fff;border:2px solid white">
+                    <!-- Ever wondered what something was like before you got there? -->
+                    <span fa-show="text"> Learn </span>
+                </p>    
+            </fa-surface>
+         </fa-modifier>
+</fa-app>

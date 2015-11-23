@@ -1,0 +1,157 @@
+/*
+To customize the look and feel of Ionic, you can override the variables
+in ionic's _variables.scss file.
+
+For example, you might change some of the default colors:
+
+$light:                           #fff !default;
+$stable:                          #f8f8f8 !default;
+$positive:                        #387ef5 !default;
+$calm:                            #11c1f3 !default;
+$balanced:                        #33cd5f !default;
+$energized:                       #ffc900 !default;
+$assertive:                       #ef473a !default;
+$royal:                           #886aea !default;
+$dark:                            #444 !default;
+*/
+$positive:                        #22A7F0 !default;
+$dark:                            #333333 !default;
+
+// The path for our ionicons font files, relative to the built CSS in www/css
+$ionicons-font-path: "../lib/ionic/fonts" !default;
+
+// Include all of Ionic
+@import "www/lib/ionic/scss/ionic";
+@import url(http://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,700);
+$positive:                        #22A7F0 !default;
+
+
+.popup-container .popup {
+  width: 80%;
+  background-color: transparent;
+}
+
+.popup h3 {
+	color: $light;
+}
+
+.popup-body, .popup-body span {
+	color: $light;
+	text-align: center;
+}
+.popup-head {
+  border-bottom: 1px solid $light;
+}
+
+
+.gradient {
+  	background: -webkit-linear-gradient(left, $positive , $dark); /* For Safari 5.1 to 6.0 */
+  	background: -o-linear-gradient(right, $positive, $dark); /* For Opera 11.1 to 12.0 */
+  	background: -moz-linear-gradient(right, $positive, $dark); /* For Firefox 3.6 to 15 */
+  	background: linear-gradient(to right, $positive , $dark); /* Standard syntax */
+  	// -webkit-background-clip: text;
+  	// -webkit-text-fill-color: transparent;
+}
+
+.item {
+	border-color:none !important;
+	border-style:none !important;
+}
+.bar.bar-dark .title {
+  color: $positive;
+}
+
+.spinner svg {
+  width: 150px;
+  height: 150px;
+}
+.loading-container .loading {
+	background: none;
+}
+.bar-dark .button.button-clear {
+  color: $positive;
+}
+.header-item {
+	color: white;
+}
+.title {
+	color: $positive;
+}
+.fira, .fira h1, .fira p, .fira h2, .fira h3 {
+	font-family: 'Fira Sans', sans-serif;
+	font-weight:300;
+	color: #404040;
+}
+.fira-strong {
+	font-family: 'Fira Sans', sans-serif;
+	font-size:1em;
+	font-weight:700;
+	color: white;
+}
+
+/* Empty. Add your own CSS if you like */
+html, body, #map-container {
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	top:0px;
+}
+
+.colorize, .colorize p, .colorize h2, .colorize i {
+	color: #22A7F0;
+}
+
+#map {
+	position:absolute;
+	top:0;
+	bottom:0px;
+	left:0px;
+	right:0px;
+	width:100%;
+	height:94%;
+} 
+
+.box, .box h1, .box h2, .box h3, .box p {
+	 color:white;
+	 text-align: center;
+}
+
+.scroll, .slider {
+	height:100%;
+}
+.item-complex .item-content {
+	padding:0px;
+}
+
+.slider-pager .slider-pager-page {
+	color: white;
+}
+
+#cd-zoom-in, #cd-zoom-out {
+	height: 32px;
+	width: 32px;
+	cursor: pointer;
+	margin-left: 10px;
+	margin-bottom: 10px;
+	background-color: rgba($positive, .3);
+	background-repeat: no-repeat;
+	background-size: 32px 64px;
+	text-align:center;
+	padding-top:5px;
+	background-image: url('../www/img/cd-icon-controller.svg');
+
+	.no-touch &:hover {
+		background-color: rgba($positive, 1);
+	}
+}
+
+#cd-zoom-in {
+	background-position: 50% 0;
+	margin-top: 10px;
+	margin-bottom: 1px;
+}
+
+#cd-zoom-out {
+	background-position: 50% -32px;
+}

@@ -1,0 +1,56 @@
+<!-- <ion-header-bar align-title="center" class="bar-dark"> 
+    <div class="buttons" >
+        <button class="button button-clear ion-ios-arrow-thin-left" style="font-size:40px;" ng-click="previous()"></button>
+    </div>
+    <h1 class="title">Title!</h1>
+    <div class="buttons">
+        <button class="button button-clear ion-ios-arrow-thin-right" style="font-size:40px;" ng-click="next()"></button>
+    </div>
+</ion-header-bar> -->
+
+<ion-slide-box on-slide-changed="slideChanged($index)" show-pager="true">
+    <ion-slide >
+        <fa-app ng-swipe-left="swipeLeft()" ng-controller="Slide1Ctrl" style="height: 100%;margin-top:0px;background-color:#000;color:white;position: fixed;top: 0;right: 0;bottom: 0;left: 0;"> 
+        <fa-modifier ng-repeat="x in {x:1}" 
+                    fa-origin="[.5,.5]"  
+                    fa-translate="imageTransition.get()"
+                    >
+            <fa-image-surface 
+                     fa-touchend="touchEnd($event)"
+                     fa-animate-enter="enter()" 
+                     fa-animate-leave="leave()" 
+                     fa-animate-halt="halt()"
+                     fa-image-url="/img/icon.png"
+                     class="img"
+                     fa-color="transparent"
+                     fa-background-color="transparent"
+                     fa-size="generateSize()">
+
+          </fa-image-surface>
+        </fa-modifier>
+        <fa-modifier fa-origin="[0,0]" fa-translate="textTransition.get()">
+        <fa-surface fa-size="[undefined, 200]">
+        <h3 style="color:#fff">Count: {{touchEndCount}} Find cool places in real time.</h3>
+        </fa-surface>
+        </fa-modifier>
+        
+        </fa-app>
+    </ion-slide>
+    <ion-slide>
+        
+    </ion-slide>
+    <ion-slide>
+        <div class="module3">
+            <div>
+                <h1>
+                    Skyscraper
+                </h1>
+                <p>
+                   before you get there.
+                </p>
+            </div>
+        </div>
+    </ion-slide>
+
+</ion-slide-box>
+

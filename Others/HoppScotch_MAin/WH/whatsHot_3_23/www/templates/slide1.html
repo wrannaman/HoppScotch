@@ -1,0 +1,70 @@
+<fa-app 
+    ng-swipe-left="swipeLeft()" 
+    ng-swipe-right="swipeRight()"  
+    ng-controller="Slide1Ctrl" 
+
+    style="height: 100%;width:100%;margin-top:0px;background-color:#231f20;color:white;position: fixed;top: 0;right: 0;bottom: 0;left: 0;">
+        
+        <fa-modifier
+            ng-repeat="x in {x:1}"
+            fa-origin="[.5, .5]" 
+            fa-align="[.5, 0]" 
+            fa-opacity="opacity" 
+            fa-translate="imageTransition.get()"
+            fa-animate-leave="animateOut()"
+            fa-animate-enter="animate()"
+            >
+            <fa-image-surface fa-image-url="/img/fire.gif" fa-size="[100, 100]" >
+            </fa-image-surface>
+         </fa-modifier>
+
+         <!-- Image -->
+         <fa-modifier  
+            fa-origin="[.5, .5]" 
+            fa-align="[.5, 0]" 
+            fa-opacity="opacity" 
+            fa-translate="textTransition.get()"
+            fa-animate-leave="animateOut()"
+            fa-animate-enter="animate()"
+            ng-repeat="x in {x:1}">
+            <fa-surface fa-size="[undefined, 100]" >
+                <h2 style="text-align:center;color:#fff">
+                	<!-- Ever wondered what something was like before you got there? -->
+                    You know when you get somewhere and it sucks?
+                </h2>   
+            </fa-surface>
+         </fa-modifier>
+         <fa-modifier  
+            fa-origin="[.5, .5]" 
+            fa-align="[.5, 0]" 
+            fa-opacity="opacity2" 
+            fa-translate="text2Transition.get()"
+            fa-animate-leave="animateOut()"
+            fa-animate-enter=""
+            ng-repeat="x in {x:1}">
+            <fa-surface fa-size="[undefined, 100]" >
+                <h2 style="text-align:center;color:#fff">
+                    <!-- Ever wondered what something was like before you got there? -->
+                    Share where you are and how you feel about it
+                </h2>   
+            </fa-surface>
+         </fa-modifier>
+         <fa-modifier  
+            fa-origin="[.5, .5]" 
+            fa-align="[.5, 0]" 
+            fa-opacity="opacity3" 
+            fa-translate="text3Transition.get()"
+            fa-animate-leave="animateOut()"
+            fa-animate-enter=""
+            ng-repeat="x in {x:1}">
+            <fa-surface fa-size="[undefined, 100]" >
+                <h2 style="text-align:center;color:#fff">
+                    <!-- Ever wondered what something was like before you got there? -->
+                   so others can avoid the pain.
+                </h2>   
+            </fa-surface>
+         </fa-modifier>
+
+          
+   
+</fa-app>

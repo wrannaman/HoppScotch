@@ -1,0 +1,67 @@
+
+ <ion-header-bar align-title="center" class="bar-royal">
+  <div class="buttons">
+    <button class="button icon ion-ios-location-outline" ng-click="chat()"></button>
+  </div>
+  <h1 class="title">Chat</h1>
+  <div class="buttons">
+    <button class="button icon ion-ios-information-outline" ng-click="openModal()"></button>
+  </div>
+</ion-header-bar>
+<ion-view view-title="Map" id="parent" ng-controller="ChatCtrl" style="margin-top:60px;background-color:#000c2e; background: #000c2e url('img/fire.gif') no-repeat center center fixed;padding-bottom:100px !important;overflow-y:scroll;">
+    
+    <!-- <div style="clear:both;margin-right:10px;" ng-repeat="message in messageArray" >
+    <p class="from-me">
+          {{message.message}}
+          {{message._id}}
+          {{message.points}}
+    </p>
+    </div> -->
+    <ion-list ng-controller="ChatCtrl"
+          show-delete="shouldShowDelete"
+          show-reorder="shouldShowReorder"
+          style="margin-top:60px;overflow-y:scroll;"
+          can-swipe="listCanSwipe">
+  <ion-item ng-repeat="message in messageArray | orderBy: '-points'"
+            class="" style="white-space:normal !important">
+    <div class="row">
+    <div class="col">
+      <h2 style="color:white;"><i class="ion-ios-pulse"></i> {{message.points}}</h2>
+    </div>
+    <div class="col-75">
+    <!-- <h2 style="color:white;">{{message.id}}</h2> -->
+    <p  style="color:white;white-space:normal !important;padding-top:6px;">{{message.message}}</p>
+    </div>
+    <ion-option-button class="button-positive"
+                       ng-click="down(message)">
+      DownVote
+    </ion-option-button>
+    <ion-option-button class="button-info"
+                       ng-click="up(message)">
+      UpVote
+    </ion-option-button>
+    <ion-delete-button class="ion-minus-circled"
+                       ng-click="message.splice($index, 1)">
+    </ion-delete-button>
+    <ion-reorder-button class="ion-navicon"
+                        on-reorder="reorderItem(message, $fromIndex, $toIndex)">
+    </ion-reorder-button>
+    </div>
+  </ion-item>
+</ion-list>
+  
+  
+    
+</ion-view>
+<ion-footer-bar class="bar-royal" style="height:60px;" ng-controller="ChatCtrl">
+    <div class="list" style="width:100%;position:absolute;z-index:50;">
+      <div class="item item-input-inset" style="border:none;">
+        <label class="item-input-wrapper">
+          <input type="text" placeholder="Message" id="message">
+        </label>
+        <button class="button button-small" ng-click="postMessage()">
+          Send
+        </button>
+      </div>
+    </div>
+</ion-footer-bar>

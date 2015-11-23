@@ -1,0 +1,93 @@
+<fa-app ng-swipe-left="swipeLeft()" ng-swipe-right="swipeRight()"  ng-controller="Slide4Ctrl" style="height: 100%;width:100%;margin-top:0px;background-color:#231f20;color:white;position: fixed;top: 0;right: 0;bottom: 0;left: 0;">
+        
+       <!--  <fa-modifier fa-origin="[.5, .5]" fa-align="[.5, 0]" fa-translate="bg1Transition.get()">
+            <fa-image-surface  fa-image-url="/img/water.png" fa-size="[500, 500]" >
+            </fa-image-surface>
+         </fa-modifier> -->
+         <fa-modifier 
+             fa-origin="[.55, .55]" 
+             fa-align="[.6, 0]" 
+             fa-opacity="opacity"
+             fa-translate="bg2Transition.get()">
+            <fa-image-surface  
+                fa-image-url="img/poof.png" 
+                fa-size="[500, 500]"
+                fa-click="swipeLeft()" >
+            </fa-image-surface>
+
+         </fa-modifier>
+         <fa-modifier 
+            fa-opacity="opacity" 
+            fa-origin="[.55, .55]" 
+            fa-align="[.6, 0]" 
+            fa-opacity="opacity"
+            fa-translate="bg3Transition.get()">
+            <fa-image-surface   
+                fa-image-url="img/map.png" 
+                fa-size="[500, 500]"
+                fa-click="swipeLeft()" >
+            </fa-image-surface>
+         </fa-modifier>
+
+        <fa-modifier 
+            fa-opacity="opacity" 
+            fa-origin="[.5, .5]" 
+            fa-align="[.5, 0]" 
+            fa-opacity="opacity"
+            fa-translate="image1Transition.get()">
+            <fa-image-surface  
+                fa-image-url="img/red.png" 
+                fa-size="[100, 100]" 
+                fa-click="swipeLeft()">
+            </fa-image-surface>
+         </fa-modifier>
+         <fa-modifier 
+            fa-opacity="opacity" 
+            fa-origin="[.5, .5]" 
+            fa-align="[.5, 0]" 
+            fa-opacity="opacity"
+            fa-translate="image2Transition.get()">
+            <fa-image-surface  
+                fa-image-url="img/yellow.png" 
+                fa-size="[100, 100]" 
+                fa-click="swipeLeft()">
+            </fa-image-surface>
+         </fa-modifier>
+         <fa-modifier 
+            fa-origin="[.5, .5]" 
+            fa-align="[.5, 0]" 
+            fa-opacity="opacity"
+            fa-translate="image3Transition.get()">
+            <fa-image-surface  
+                fa-image-url="img/green.png" 
+                fa-size="[100, 100]" 
+                fa-click="swipeLeft()">
+            </fa-image-surface>
+         </fa-modifier>
+         <fa-modifier  
+            fa-origin="[.5, .5]" 
+            fa-align="[.5, 0]" 
+            fa-opacity="opacity"
+            fa-translate="textTransition.get()">
+            <fa-surface 
+                fa-size="[undefined, 100]" 
+                fa-click="swipeLeft()">
+                <h1 style="text-align:center;color:#fff">
+                    Explore the map and know before you go.
+                </h1>   
+                <h4 style="text-align:left;margin-left:5%;color:#fff">
+                Red: It's terrible
+                
+                </h4>
+                <h4 style="text-align:left;margin-left:5%;color:#fff">
+             
+                Yellow: Mild disdain is being expressed.
+        
+                </h4>
+                <h4 style="text-align:;left;margin-left:5%;color:#fff">
+                No Color: No idea, it might be okay.
+                </h4>
+            </fa-surface>
+         </fa-modifier>
+   
+</fa-app>

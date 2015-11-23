@@ -1,0 +1,163 @@
+<fa-app 
+    ng-swipe-left="swipeLeft()" 
+    ng-swipe-right="swipeRight()"  
+    ng-controller="StartCtrl" 
+    style="height: 100%;width:100%;margin-top:0px;background-color:#000c2e;color:white;position: fixed;top: 0;right: 0;bottom: 0;left: 0;">
+        <!-- Image -->
+         <fa-modifier  
+            fa-origin="[.5, .5]" 
+            fa-align="[.5, 0]" 
+            fa-opacity="opacity"
+            fa-translate="iconTransition.get()"
+            fa-animate-leave="animateOut()"
+            ng-repeat="x in {x:1}">
+
+            <fa-image-surface fa-image-url="/img/fire.gif" fa-size="[100, 100]" >
+            </fa-image-surface>
+         </fa-modifier>
+
+         <!-- Name -->
+         <fa-modifier  
+            fa-origin="[.5, .5]" 
+            fa-align="[.5, 0]" 
+            fa-opacity="opacity"
+            fa-translate="nameTransition.get()"
+            fa-animate-leave="animateOut()"
+            ng-repeat="x in {x:1}">
+            <fa-surface 
+                fa-size="[undefined, 100]" 
+                
+                >
+                <h1 style="text-align:center;color:#fff;">
+                    <!-- Ever wondered what something was like before you got there? -->
+                     NoGo 
+                </h1>    
+            </fa-surface>
+         </fa-modifier>
+
+         <!-- Log Line -->
+         <fa-modifier  
+            fa-origin="[.5, .5]" 
+            fa-align="[.5, 0]" 
+            fa-opacity="opacity"
+            fa-translate="logTransition.get()"
+            fa-animate-leave="animateOut()"
+            ng-repeat="x in {x:1}">
+            <fa-surface 
+                fa-size="[undefined, 100]" 
+                ng-click="selection('learn')"
+                >
+                <h3 style="text-align:center;color:#fff;">
+                    <!-- Ever wondered what something was like before you got there? -->
+                     A rediculous yet somewhat informative way to see real time un-popularity of events and locations.
+                </h3>    
+            </fa-surface>
+         </fa-modifier>
+
+         <!-- Divider -->
+         <fa-modifier  
+            fa-origin="[.5, .5]" 
+            fa-align="[.5, 0]" 
+            fa-opacity="opacity"
+            fa-translate="dividerTransition.get()"
+            fa-animate-leave="animateOut()"
+            fa-animate-enter="animate()"
+            ng-repeat="x in {x:1}">
+            <fa-surface fa-size="[150, 100]">
+            <div style="width: 150px;height: 2px; margin: 0 auto 30px; background: -webkit-linear-gradient(0deg,#10a0e6 0,#da262e 100%);background: -webkit-gradient(linear,0 50%,100% 50%,color-stop(0,#10a0e6),color-stop(1,#da262e));" >
+            </div>
+            </fa-surface>
+         </fa-modifier>
+
+         <!-- Form -->
+         <fa-modifier  
+            fa-origin="[.5, .5]" 
+            fa-align="[.5, 0]" 
+            fa-opacity="opacity"
+            fa-translate="formTransition.get()"
+            fa-animate-leave="animateOut()"
+            ng-repeat="x in {x:1}">
+            <fa-surface fa-size="[undefined, 75]"  style="color:white">
+                <form ng-submit="submit()">
+                <input type="email"  id="email" ng-model="email" placeholder="Email" style="width:100%;text-align:center;background-color:transparent;border-bottom: 2px solid white;border-radius:0;margin-bottom:5px;color:white;" required>
+                <input type="password" id="pass" ng-model="password" placeholder="Password" style="width:100%;text-align:center;background-color:transparent;border-bottom: 2px solid white;border-radius:0;margin-bottom:5px;color:white;" required>
+                </form>
+            </fa-surface>
+         </fa-modifier>
+
+         <!-- Button -->
+         <fa-modifier  
+            fa-origin="[.5, .5]" 
+            fa-align="[.5, 0]" 
+            fa-opacity="opacity"
+            fa-translate="submitTransition.get()"
+            fa-animate-leave="animateOut()"
+            ng-repeat="x in {x:1}">
+            <fa-surface fa-size="[100, 75]"  style="color:white">
+                <input ng-click="submit()" placeholder="Enter"  type="submit" style="display: block;width:100%;margin: 0 0px;margin-top:20px;height:50px;background-color: #fff; border-radius: 5px; padding-top: 0px; font-size: 20px; line-height: 36px; color: #000c2e;  -webkit-transition: margin-top .2s ease,height .2s ease,background-color .2s ease; transition: margin-top .2s ease,height .2s ease,background-color .2s ease;text-align:center;">
+            </fa-surface>
+         </fa-modifier>
+
+         <!-- FB -->
+         <fa-modifier  
+            fa-origin="[.5, .5]" 
+            fa-align="[.5, 0]" 
+            fa-opacity="opacity"
+            fa-translate="fbTransition.get()"
+            fa-animate-leave="animateOut()"
+            ng-repeat="x in {x:1}">
+
+            <fa-image-surface 
+                  ng-click="selection('fb')" 
+                fa-image-url="/img/fb.png" 
+                fa-size="[50, 50]" >
+            </fa-image-surface>
+         </fa-modifier>
+
+         <!-- TW -->
+         <fa-modifier  
+            fa-origin="[.5, .5]" 
+            fa-align="[.5, 0]" 
+            fa-opacity="opacity"
+            fa-translate="twTransition .get()"
+            fa-animate-leave="animateOut()"
+            ng-repeat="x in {x:1}">
+
+            <fa-image-surface 
+                ng-click="selection('tw')" 
+                fa-image-url="/img/tw.png" 
+                fa-size="[50, 50]" >
+            </fa-image-surface>
+         </fa-modifier>
+
+
+         <!-- Button2 -->
+         <fa-modifier  
+            fa-origin="[.5, .5]" 
+            fa-align="[.5, 0]" 
+            fa-opacity="opacity"
+            fa-translate="button2Transition.get()"
+            fa-animate-leave="animateOut()"
+            ng-repeat="x in {x:1}">
+            <fa-surface fa-size="[100, 75]" ng-click="selection('register')">
+            <div style="display: block;height:50px;background-color: #fff; border-radius: 5px; padding-top: 7px; font-size: 20px; line-height: 36px; color: #000c2e; margin: 0 0px; -webkit-transition: margin-top .2s ease,height .2s ease,background-color .2s ease; transition: margin-top .2s ease,height .2s ease,background-color .2s ease;text-align:center;" >
+            Register
+            </div>
+            </fa-surface>
+         </fa-modifier>
+
+         <!-- Button3 -->
+         <fa-modifier  
+            fa-origin="[.5, .5]" 
+            fa-align="[.5, 0]" 
+            fa-opacity="opacity"
+            fa-translate="button3Transition.get()"
+            fa-animate-leave="animateOut()"
+            ng-repeat="x in {x:1}">
+            <fa-surface fa-size="[100, 75]" ng-click="selection('learn')">
+            <div style="display: block;height:50px;background-color: #fff; border-radius: 5px; padding-top: 7px; font-size: 20px; line-height: 36px; color: #000c2e; margin: 0 0px; -webkit-transition: margin-top .2s ease,height .2s ease,background-color .2s ease; transition: margin-top .2s ease,height .2s ease,background-color .2s ease;text-align:center;" >
+            Learn
+            </div>
+            </fa-surface>
+         </fa-modifier>
+</fa-app>

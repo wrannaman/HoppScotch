@@ -1,0 +1,15 @@
+<fa-app ng-swipe-left="swipeLeft()" ng-swipe-right="swipeRight()"  ng-controller="Slide3Ctrl" style="height: 100%;width:100%;margin-top:0px;background-color:#000;color:white;position: fixed;top: 0;right: 0;bottom: 0;left: 0;">
+
+        <fa-modifier fa-origin="[.5, .5]" fa-align="[.5, 0]" fa-translate="imageTransition.get()">
+            <fa-image-surface  fa-image-url="/img/icon.png" fa-size="[100, 100]" >
+            </fa-image-surface>
+         </fa-modifier>
+         <fa-modifier  fa-origin="[.5, .5]" fa-align="[.5, 0]" fa-translate="textTransition.get()">
+            <fa-surface fa-size="[undefined, 100]" >
+                <h1 style="text-align:center;color:#fff">
+                Know before you get there.
+                </h1>   
+            </fa-surface>
+         </fa-modifier>
+   
+</fa-app>

@@ -1,0 +1,28 @@
+
+ <ion-header-bar align-title="center" class="bar-royal">
+  <div class="buttons">
+    <button class="button icon ion-ios-chatbubble-outline" ng-click="chat()"></button>
+  </div>
+  <h1 class="title">Map</h1>
+</ion-header-bar>
+<ion-view view-title="Map" scroll="false" id="parent" ng-cloak>
+
+    <ui-gmap-google-map style="overflow-x:scroll;overflow-y:scroll" events="map.events" refresh="true" control="map.control" id="child" ng-if="map.show" center='map.center'  draggable="true" zoom='map.zoom' options="map.options">
+        <ui-gmap-layer  namespace="visualization" type="HeatmapLayer"  show="map.showHeat == '1'" onCreated="map.heatLayerCallback" >
+        </ui-gmap-layer>
+         <ui-gmap-layer  namespace="visualization" type="HeatmapLayer"  ng-if="map.showHeat2 == '1'" onCreated="map.heatLayerCallback2" >
+         </ui-gmap-layer>
+    </ui-gmap-google-map>
+
+    <ion-footer-bar class="bar-royal">
+        <h1 class="title">
+            <div class="buttons">
+                <button class="button button-clear" ng-click="addLocation()" style="width:80%;margin-top:5px;background-color:white;color:#000c2f;">It's pretty bad!</button>
+            </div>
+        </h1>
+        <!-- <p>
+            Lat: {{map.long}}
+            Long: {{map.lat}}
+        </p> -->
+    </ion-footer-bar>
+</ion-view>

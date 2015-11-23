@@ -1,0 +1,54 @@
+<ion-header-bar align-title="center" class="bar-transparent">
+    <div class="buttons" >
+        <button class="button button-clear ion-ios-arrow-thin-left" style="font-size:40px;" ng-click="previous()"></button>
+    </div>
+    <h1 class="title">Title!</h1>
+    <div class="buttons">
+        <button class="button button-clear ion-ios-arrow-thin-right" style="font-size:40px;" ng-click="next()"></button>
+    </div>
+</ion-header-bar>
+
+<ion-slide-box on-slide-changed="slideChanged($index)" show-pager="true">
+    <ion-slide>
+        <fa-app ng-controller="Lesson3Ctrl" style="height: 100%;margin-top:60px;color:#fff;">
+
+            <fa-grid-layout fa-options="myGridLayoutOptions">
+                <fa-modifier ng-repeat="item in list"
+                             fa-size="[undefined, 100]"
+                             fa-origin="[0.5, 0.5]"
+                             fa-align="[0.5, 0.5]"
+                             fa-rotate-z="item.rotate.get()">
+                    <fa-surface fa-background-color="item.bgColor">
+                        {{item.content}}
+                    </fa-surface>
+                </fa-modifier>
+            </fa-grid-layout>
+        </fa-app>
+    </ion-slide>
+    <ion-slide>
+        <div class="module4">
+            <div>
+                <h1>
+                    Skyscraper
+                </h1>
+                <p>
+                  how cool something is
+                </p>
+            </div>
+        </div>
+    </ion-slide>
+    <ion-slide>
+        <div class="module3">
+            <div>
+                <h1>
+                    Skyscraper
+                </h1>
+                <p>
+                   before you get there.
+                </p>
+            </div>
+        </div>
+    </ion-slide>
+
+</ion-slide-box>
+

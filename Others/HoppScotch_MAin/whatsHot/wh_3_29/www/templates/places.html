@@ -1,0 +1,19 @@
+<ion-view view-title="Places">
+  <ion-content>
+    <ion-list>
+      <ion-item ng-repeat="place in places" href="#/app/places/{{places.name}}">
+        <div class="card">
+		  <div class="item item-divider">
+		   {{place.name}}
+		  </div>
+		  <div class="item item-text-wrap">
+		    {{place.address}}
+		  </div>
+		  <div class="item item-divider">
+		   Stats on each place. 
+		  </div>
+		</div>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
